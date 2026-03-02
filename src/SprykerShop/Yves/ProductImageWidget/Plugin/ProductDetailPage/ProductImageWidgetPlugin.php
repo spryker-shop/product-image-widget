@@ -16,27 +16,16 @@ use SprykerShop\Yves\ProductDetailPage\Dependency\Plugin\ProductImageWidget\Prod
  */
 class ProductImageWidgetPlugin extends AbstractWidgetPlugin implements ProductImageWidgetPluginInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductViewTransfer $productViewTransfer
-     *
-     * @return void
-     */
     public function initialize(ProductViewTransfer $productViewTransfer): void
     {
         $this->addParameter('product', $productViewTransfer);
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return static::NAME;
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return '@ProductImageWidget/views/image-slider/image-slider.twig';
